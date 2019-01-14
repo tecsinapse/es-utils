@@ -2,10 +2,13 @@
   "name": "@tecsinapse/tecsinapse-es-utils",
   "version": "0.0.1",
   "description": "A Utils library to turn life easy for Javascript projects",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tecsinapse",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash.uniq": "^4.5.0"
+  }
 }
