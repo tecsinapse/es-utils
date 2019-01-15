@@ -1,6 +1,6 @@
 {
   "name": "@tecsinapse/tecsinapse-es-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Utils library to turn life easy for Javascript projects",
   "main": "src/index.js",
   "scripts": {
