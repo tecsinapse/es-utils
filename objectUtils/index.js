@@ -1,6 +1,6 @@
 "use strict";
 
-var lodash = require('lodash');
+var uniq = require('lodash.uniq');
 
 var objUtils = {
 
@@ -99,7 +99,7 @@ var objUtils = {
   },
 
   cleanArray : function (a) {
-    return lodash.uniq(a.filter(n => n));
+    return uniq(a.filter(n => n));
   }
 
 };
