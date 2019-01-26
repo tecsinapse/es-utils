@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",
     "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:build": "docz build --base='/tecsinapse-es-utils/'"
   },
   "author": "Tecsinapse",
   "license": "ISC",
