@@ -1,8 +1,8 @@
 "use strict";
 
-var uniq = require('lodash.uniq');
+const uniq = require('lodash.uniq');
 
-var objUtils = {
+const objUtils = {
 
   omitDeep: function (obj, key) {
     const keys = Object.keys(obj);
