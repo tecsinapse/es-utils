@@ -18,7 +18,7 @@ const {
   isNotEmptyOrNull,
   verifyIfString,
   isStringNotBlank
-} = require('../objectUtils');
+} = require('../core/object');
 
 const arrayTest = [1, 2, 3, 4, 5, 5, 5];
 const arrayTestConcat = [6, 7, 8, 9, 10, 11, 12];

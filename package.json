@@ -1,8 +1,8 @@
 {
   "name": "@tecsinapse/tecsinapse-es-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A Utils library to turn life easy for Javascript projects",
-  "main": "src/index.js",
+  "main": "core/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public"
