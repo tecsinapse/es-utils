@@ -2,5 +2,5 @@
 
 A useful lib for javascript dev
 
-## ObjectUtils
+Docs [here](https://tecsinapse.github.io/tecsinapse-es-utils)
 
