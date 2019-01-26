@@ -35,19 +35,23 @@ var objUtils = {
     }, [])
   },
 
-  getFirstFromSingleElementArray: function (array = []) {
+  getFirstFromSingleElementArray: function (array) {
+    array = (typeof array !== 'undefined') ? array : [];
     return array.length === 1 ? array[0] : null
   },
 
-  getAnyFromArray: function(array = []) {
+  getAnyFromArray: function(array) {
+    array = (typeof array !== 'undefined') ? array : [];
     return array.length > 0 ? array[0] : null;
   },
 
-  getLastFromArrayOrObject: function(array = []) {
+  getLastFromArrayOrObject: function(array) {
+    array = (typeof array !== 'undefined') ? array : [];
     return array.length > 0 ? array[array.length - 1] : {};
   },
 
-  getFirstFromSingleElementArrayNotNull: function(array = []) {
+  getFirstFromSingleElementArrayNotNull: function(array) {
+    array = (typeof array !== 'undefined') ? array : [];
     return array.length === 1 ? array[0] : {};
   },
 
@@ -60,7 +64,7 @@ var objUtils = {
   },
 
   verifyIfString: function(value) {
-    return value && typeof value === 'string';
+    return value !== null && value !== undefined && typeof value === 'string';
   },
 
   isStringNotBlank: function(value) {
@@ -68,6 +72,7 @@ var objUtils = {
   },
 
   truncateString: function(string, max = 30) {
+    max = (typeof max !== 'undefined') ? max : 30;
     return string.substr(0, max - 1) + (string.length > max ? '...' : '');
   },
 
@@ -80,11 +85,14 @@ var objUtils = {
     });
   },
 
-  resolveObj: function(path, obj = null) {
+  resolveObj: function(path, obj) {
+    obj = (typeof obj !== 'undefined') ? obj : null;
     const newPath = path.split('.');
     let current = obj;
     while (newPath.length) {
-      if (typeof current !== 'object' || current === null) return null;
+      if (typeof current !== 'object' || current === null) {
+        return null;
+      }
       current = current[newPath.shift()];
     }
     return current;
@@ -95,7 +103,7 @@ var objUtils = {
   },
 
   flatMap: function(f, xs) {
-    return xs.map(f).reduce(concat, []);
+    return xs.map(f).reduce(objUtils.concat, []);
   },
 
   cleanArray : function (a) {
