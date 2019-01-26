@@ -1,3 +1,3 @@
 export default {
-  dest: '/docz-dist',
+  dest: '/docs',
 }
