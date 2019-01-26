@@ -1,0 +1,632 @@
+---
+name: Object API
+route: /documentation/objects-api
+parent: Documentation
+---
+
+# Object Utils API
+
+> ### Note
+>
+> By default, this functions were tested only in `ES6` environments.<br/>
+> All are exported at `/tecsinapse-es-utils/core/object/index.js`
+
+
+## `cleanArray(a):Array`
+
+`objUtils.cleanArray`
+
+This functions removes any duplicate item at an array.
+
+
+### Parameters
+
+- a: `[]`<br/>
+  The input array.
+
+
+### Output
+
+- `a` array without duplicates
+
+
+### Examples
+
+```js
+import { cleanArray } from '@tecsinapse/es-utils/core/object'
+
+const arrayTest = [1, 2, 3, 4, 5, 5, 5];
+
+console.log("cleanArray: " +  cleanArray(arrayTest));
+```
+
+Expected output: <br/>
+- `cleanArray: 1,2,3,4,5`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `flatMap(f, xs):Array`
+
+`objUtils.flatMap`
+
+This functions flats a array using the 'f' function to determine final itens of the array.
+
+
+### Parameters
+
+- f: `function`<br/>
+  The flat function
+
+- xs: `[]`<br/>
+  The input array
+
+### Output
+
+- `xs` flated using `f` function.
+
+
+### Examples
+
+```js
+import { flatMap } from '@tecsinapse/es-utils/core/object'
+
+const flatArrayTest = [[1, 2], [3, 4], [5, 6]];
+
+console.log("flatMap: " +  flatMap(v => v, flatArrayTest));
+```
+
+Expected output: <br/>
+- `flatMap: 1,2,3,4,5,6`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `concat(x, y):Array`
+
+`objUtils.concat`
+
+This functions perforns concatenation between two arrays `x` and `y` and return `xy` array.
+
+
+### Parameters
+
+- x: `[]`<br/>
+  First array input
+
+- y: `[]`<br/>
+  Second array input
+
+### Output
+
+- `xy` concatened array.
+
+
+### Examples
+
+```js
+import { concat } from '@tecsinapse/es-utils/core/object'
+
+const arrayTest = [1, 2, 3, 4, 5, 5, 5];
+const arrayTestConcat = [6, 7, 8, 9, 10, 11, 12];
+
+console.log("concat: " +  concat(arrayTest, arrayTestConcat));
+
+```
+
+Expected output: <br/>
+- `concat: 1,2,3,4,5,5,5,6,7,8,9,10,11,12`
+
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `flatten(arrayOfArrays):Array`
+
+`objUtils.flatten`
+
+This functions flats an array of arrays.
+
+### Parameters
+
+- arrayOfArrays: `[]`<br/>
+  The input array of arrays
+
+### Output
+
+- `arrayOfArrays` flated.
+
+
+### Examples
+
+```js
+import { flatten } from '@tecsinapse/es-utils/core/object'
+
+const flattenTest = [[1, 2, 3], [4, 5, 6]];
+
+console.log("flatten: " + flatten(flattenTest));
+
+```
+
+Expected output: <br/>
+- `flatten: 1,2,3,4,5,6`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `removeDuplicates(myArr, prop):Array`
+
+`objUtils.removeDuplicates`
+
+This function removes the duplicate itens of the field `prop` inside `myArr` array.
+
+### Parameters
+
+- myArr: `[]`<br/>
+  The input array.
+
+- prop: `string`<br/>
+  The field name wich functions will verify oneness, it's not allow to use deep fields.
+
+### Output
+
+- `myArr` with duplicates removed.
+
+
+### Examples
+
+```js
+import { removeDuplicates } from '@tecsinapse/es-utils/core/object'
+
+const removeDuplicatesTest = [
+  {id: 1},
+  {id: 1},
+  {id: 2}
+];
+
+console.log("removeDuplicates: " +  removeDuplicates(removeDuplicatesTest, 'id'));
+
+```
+
+Expected output: <br/>
+- `removeDuplicates: [object Object],[object Object]` (it have showed only two of three)
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `omitDeep(obj, key):Array`
+
+`objUtils.omitDeep`
+
+This function removes the field with name `key` inside the `obj` object.
+
+### Parameters
+
+- obj: `{}`<br/>
+  The input object.
+
+- key: `string`<br/>
+  The field key that will be removed.
+
+### Output
+
+- `obj` with `key` removed.
+
+
+### Examples
+
+```js
+import { omitDeep } from '@tecsinapse/es-utils/core/object'
+
+const omitDeepTest = {
+  omit: true,
+  notOmit: true
+};
+
+let omitDeep1 = omitDeep(omitDeepTest, 'omit');
+console.log("omitDeep: " + omitDeep1.omit + " - "  + omitDeep1.notOmit );
+
+```
+
+Expected output: <br/>
+- `omitDeep: undefined - true`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `omitDeepArrayWalk(arr, key):Array`
+
+`objUtils.omitDeepArrayWalk`
+
+This function removes the field with name `key` of `arr` itens.
+
+### Parameters
+
+- arr: `[]`<br/>
+  The input Array.
+
+- key: `string`<br/>
+  The field key that will be removed.
+
+### Output
+
+- `arr` with `key` removed.
+
+
+### Examples
+
+```js
+import { omitDeepArrayWalk } from '@tecsinapse/es-utils/core/object'
+
+const omitDeepArrayWalkTest = [
+  {id:1, vector: 1},
+  {id:2, vector: 2},
+  {id:3, vector: 3},
+];
+
+console.log("omitDeepArrayWalk: " + omitDeepArrayWalk(omitDeepArrayWalkTest, 'vector').map(c=>c.id));
+
+```
+
+Expected output: <br/>
+- `omitDeepArrayWalk: 1,2,3`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `resolveObj(path, obj):Array`
+
+`objUtils.resolveObj`
+
+Get the item at the path `path` of the `òbj`
+
+### Parameters
+
+- òbj: `{}`<br/>
+  The input Array.
+
+- key: `string`<br/>
+  The field key that will be get.
+
+### Output
+
+- `key` field of `obj`.
+
+
+### Examples
+
+```js
+import { resolveObj } from '@tecsinapse/es-utils/core/object'
+
+const resolveObjectTest = {
+  clientes: {
+    id: 1,
+  }
+};
+
+console.log("resolveObj: " +  resolveObj('clientes.id', resolveObjectTest));
+
+```
+
+Expected output: <br/>
+- `resolveObj: 1`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `truncateString(string, max):String`
+
+`objUtils.truncateString`
+
+Trucante an string after `max` characters and add `...` characters at string's end.
+
+### Parameters
+
+- string: `string`<br/>
+  The input string.
+
+- max: `int`<br/>
+  Max number o characters to truncate, the default value is `30`.
+
+### Output
+
+- `key` field of `obj`.
+
+
+### Examples
+
+```js
+import { resolveObj } from '@tecsinapse/es-utils/core/object'
+
+const truncateStringTeste = 'abcdefghi';
+const truncateStringMaxTest = 5;
+
+console.log("truncateString: " +  truncateString(truncateStringTeste, truncateStringMaxTest));
+
+```
+
+Expected output: <br/>
+- `truncateString: abcd...`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `isStringNotBlank(string):Boolean`
+
+`objUtils.isStringNotBlank`
+
+Verify if string is not `''`.
+
+### Parameters
+
+- string: `string`<br/>
+  The input string.
+
+### Output
+
+- Return wheter string equals `''` or not.
+
+
+### Examples
+
+```js
+import { isStringNotBlank } from '@tecsinapse/es-utils/core/object'
+
+console.log("isStringNotBlank: " +  isStringNotBlank(''));
+```
+
+Expected output: <br/>
+- `isStringNotBlank: false`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+## `verifyIfString(string):Boolean`
+
+`objUtils.verifyIfString`
+
+Checks if `string` is type of `String`
+
+### Parameters
+
+- string: `string`<br/>
+  The input object.
+
+### Output
+
+- Return `true` if string, otherwise `not`.
+
+
+### Examples
+
+```js
+import { verifyIfString } from '@tecsinapse/es-utils/core/object'
+
+console.log("verifyIfString: " +  verifyIfString(''));
+
+```
+
+Expected output: <br/>
+- `verifyIfString: true`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `isEmptyOrNull(value):Boolean`
+
+`objUtils.isEmptyOrNull`
+
+Checks if `value` object is not empty.
+
+### Parameters
+
+- value: `{}`<br/>
+  The input object.
+
+### Output
+
+- Return `true` if empty, otherwise `not`.
+
+
+### Examples
+
+```js
+import { isEmptyOrNull } from '@tecsinapse/es-utils/core/object'
+
+console.log("isEmptyOrNull: " + isEmptyOrNull(''));
+
+```
+
+Expected output: <br/>
+- `isEmptyOrNull: true`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `isNotEmptyOrNull(value):Boolean`
+
+`objUtils.isNotEmptyOrNull`
+
+Returns negation of `objUtils.isEmptyOrNull`.
+
+### Parameters
+
+- value: `{}`<br/>
+  The input object.
+
+### Output
+
+- Return `true` if not empty, otherwise `not`.
+
+
+### Examples
+
+```js
+import { isNotEmptyOrNull } from '@tecsinapse/es-utils/core/object'
+
+console.log("isNotEmptyOrNull: " + isNotEmptyOrNull(''));
+
+```
+
+Expected output: <br/>
+- `isNotEmptyOrNull: false`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `getAnyFromArray(array):Object`
+
+`objUtils.getAnyFromArray`
+
+Returns any element of `array` array.
+
+### Parameters
+
+- array: `[]`<br/>
+  The input Array.
+
+### Output
+
+- Return first element of `array`.
+
+
+### Examples
+
+```js
+import { getAnyFromArray } from '@tecsinapse/es-utils/core/object'
+
+const getLastFromArrayOrObjectTeste = [0, '1'];
+
+console.log("getAnyFromArray: " + getAnyFromArray(getLastFromArrayOrObjectTeste));
+
+```
+
+Expected output: <br/>
+- `getAnyFromArray: 0`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `getFirstFromSingleElementArray(array):Object`
+
+`objUtils.getFirstFromSingleElementArray`
+
+Returns the first item of `array` array if it has a single item.
+
+### Parameters
+
+- array: `[]`<br/>
+  The input Array.
+
+### Output
+
+- Return first element of `array`.
+
+
+### Examples
+
+```js
+import { getFirstFromSingleElementArray } from '@tecsinapse/es-utils/core/object'
+
+const getFirstFromSingleElementArrayTeste = [null];
+
+console.log("getFirstFromSingleElementArray: " + getFirstFromSingleElementArray(getFirstFromSingleElementArrayTeste));
+
+```
+
+Expected output: <br/>
+- `getFirstFromSingleElementArray: null`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `getFirstFromSingleElementArrayNotNull(array):Object`
+
+`objUtils.getFirstFromSingleElementArrayNotNull`
+
+Returns the first item of `array` array if it have a single item and it's not null.
+
+### Parameters
+
+- array: `[]`<br/>
+  The input Array.
+
+### Output
+
+- Return first element of `array`.
+
+
+### Examples
+
+```js
+import { getFirstFromSingleElementArrayNotNull } from '@tecsinapse/es-utils/core/object'
+
+const getFirstFromSingleElementArrayNotNullTeste = ['1'];
+
+console.log("getFirstFromSingleElementArrayNotNull: " + getFirstFromSingleElementArrayNotNull(getFirstFromSingleElementArrayNotNullTeste));
+
+```
+
+Expected output: <br/>
+- `getFirstFromSingleElementArrayNotNull: 1`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+
+
+## `getLastFromArrayOrObject(array):Object`
+
+`objUtils.getLastFromArrayOrObject`
+
+Returns the last item of `array` array.
+
+### Parameters
+
+- array: `[]`<br/>
+  The input Array.
+
+### Output
+
+- Return last item of `array` or `{}`.
+
+
+### Examples
+
+```js
+import { getLastFromArrayOrObject } from '@tecsinapse/es-utils/core/object'
+
+const getLastFromArrayOrObjectTeste = [0, '1'];
+
+console.log("getLastFromArrayOrObject: " + getLastFromArrayOrObject(getLastFromArrayOrObjectTeste));
+
+
+```
+
+Expected output: <br/>
+- `getLastFromArrayOrObject: 1`
+
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)
+[//]: # (------------------------------------------------------------------------------------------------------------------------------------------------------------)

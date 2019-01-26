@@ -5,11 +5,23 @@
   "main": "core/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "author": "Tecsinapse",
   "license": "ISC",
   "dependencies": {
     "lodash.uniq": "^4.5.0"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
+    "prop-types": "^15.6.2",
+    "babel-plugin-emotion": "^10.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "docz": "^0.13.7",
+    "docz-theme-default": "^0.13.7"
   }
 }

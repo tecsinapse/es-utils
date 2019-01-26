@@ -1,5 +1,6 @@
-/* eslint no-console: 0 */
-export const Logger = {
+"use strict";
+
+exports.Logger = {
   error(error) {
     console.log(error);
     // eslint-disable-next-line

@@ -1,6 +1,24 @@
 /* eslint-disable */
 
-import getForm from './get';
+"use strict";
+
+const getForm = require('get');
+
+// eslint-ignore-next-line
+function focusByForm(formName, errors) {
+  const form = getForm(formName);
+  const elmts = (form || {}).elements || [];
+  for (let i = 0, iLen = elmts.length; i < iLen; ++i) {
+    const elmt = elmts[i];
+    // If invalid, then...
+    if (errors[elmt.name]) {
+      elmt.focus();
+      return elmt;
+    }
+  }
+  return null;
+}
+
 
 /**
  * Focuses the first invalid input control found in the form.  What is considered
@@ -19,7 +37,7 @@ import getForm from './get';
  * @returns {HTMLButtonElement|HTMLInputElement|HTMLSelectElement}
  *   The first invalid input control or `null` if not found.
  */
-export default function focusFirstInvalidInputControl(formName, errors) {
+exports.focusFirstInvalidInputControl = function(formName, errors) {
   errors = (typeof errors !== 'undefined') ? errors : {};
   Object.keys(errors).map(name => {
     const a = (document.getElementsByName(name) || [])[0];
@@ -29,18 +47,4 @@ export default function focusFirstInvalidInputControl(formName, errors) {
     }
     return null;
   });
-}
-// eslint-ignore-next-line
-function focusByForm(formName, errors) {
-  const form = getForm(formName);
-  const elmts = (form || {}).elements || [];
-  for (let i = 0, iLen = elmts.length; i < iLen; ++i) {
-    const elmt = elmts[i];
-    // If invalid, then...
-    if (errors[elmt.name]) {
-      elmt.focus();
-      return elmt;
-    }
-  }
-  return null;
-}
+};

@@ -50,7 +50,9 @@ const omitDeepArrayWalkTeste = [
   {id:3, vector: 3},
 ];
 
-console.log("omitDeep: " + omitDeep(omitDeepTest));
+let omitDeep1 = omitDeep(omitDeepTest, 'omit');
+console.log("omitDeep: " + omitDeep1.omit + " - "  + omitDeep1.notOmit );
+
 console.log("omitDeepArrayWalk: " + omitDeepArrayWalk(omitDeepArrayWalkTeste, 'vector').map(c=>c.id));
 console.log("flatten: " + flatten(flattenTeste));
 console.log("getFirstFromSingleElementArray: " + getFirstFromSingleElementArray(getFirstFromSingleElementArrayTeste));
@@ -62,7 +64,7 @@ console.log("isNotEmptyOrNull: " +  isNotEmptyOrNull(''));
 console.log("verifyIfString: " +  verifyIfString(''));
 console.log("isStringNotBlank: " +  isStringNotBlank(''));
 console.log("truncateString: " +  truncateString(truncateStringTeste, truncateStringMaxTest));
-console.log("emoveDuplicates: " +  removeDuplicates(removeDuplicatesTest, 'id'));
+console.log("removeDuplicates: " +  removeDuplicates(removeDuplicatesTest, 'id'));
 console.log("resolveObj: " +  resolveObj(pathTest, resolveObjectTest));
 console.log("concat: " +  concat(arrayTest, arrayTestConcat));
 console.log("flatMap: " +  flatMap(v => v, flatArrayTest));

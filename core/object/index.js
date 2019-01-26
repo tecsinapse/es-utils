@@ -63,15 +63,15 @@ var objUtils = {
     return !(objUtils.isEmptyOrNull(value));
   },
 
-  verifyIfString: function(value) {
-    return value !== null && value !== undefined && typeof value === 'string';
+  verifyIfString: function(string) {
+    return string !== null && string !== undefined && typeof string === 'string';
   },
 
-  isStringNotBlank: function(value) {
-    return objUtils.isNotEmptyOrNull(value) && value.trim().length;
+  isStringNotBlank: function(string) {
+    return objUtils.isNotEmptyOrNull(string) && string.trim().length;
   },
 
-  truncateString: function(string, max = 30) {
+  truncateString: function(string, max) {
     max = (typeof max !== 'undefined') ? max : 30;
     return string.substr(0, max - 1) + (string.length > max ? '...' : '');
   },
