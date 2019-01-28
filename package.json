@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",
     "docz:dev": "docz dev",
-    "docz:build": "docz build --base='/tecsinapse-es-utils/'"
+    "docz:build": "docz build --base='/es-utils/'"
   },
   "author": "Tecsinapse",
   "license": "ISC",
@@ -16,6 +16,10 @@
   },
   "peerDependencies": {
     "raven-js": "^3.27.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tecsinapse/es-utils.git"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.5",
