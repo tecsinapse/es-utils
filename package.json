@@ -1,6 +1,6 @@
 {
   "name": "@tecsinapse/es-utils",
-  "version": "0.0.91",
+  "version": "0.0.92",
   "description": "A Utils library to turn life easy for Javascript projects",
   "main": "core/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "docz:build": "docz build --base='/es-utils/'"
   },
   "author": "Tecsinapse",
-  "license": "ISC",
+  "license": "MIT",
+  "sideEffects": false,
   "dependencies": {
     "lodash.uniq": "^4.5.0"
   },
