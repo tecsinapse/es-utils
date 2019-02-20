@@ -1,6 +1,6 @@
 {
   "name": "@tecsinapse/es-utils",
-  "version": "0.0.93",
+  "version": "0.0.94",
   "description": "A Utils library to turn life easy for Javascript projects",
   "main": "core/index.js",
   "author": "Tecsinapse",
@@ -22,22 +22,13 @@
     "react-dom": "^16.7.0",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
-    "rollup": "^0.66.6",
-    "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-babel": "4.0.3",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-filesize": "^5.0.1",
-    "rollup-plugin-local-resolve": "^1.0.7",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
     "@tecsinapse/eslint-config-tecsinapse-js": "^2.1.2"
   },
   "peerDependencies": {
     "raven-js": "^3.27.0"
   },
   "scripts": {
-    "build": "rm -rf build/ && babel src/ -d core/ && rollup -c",
+    "build": "rm -rf build/ && babel src/ -d core/",
     "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",
@@ -47,5 +38,21 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tecsinapse/es-utils.git"
-  }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --max-warnings=0 --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "git update-index --again",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "files": [
+    "core"
+  ]
 }
