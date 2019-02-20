@@ -30,13 +30,15 @@
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-node-resolve": "^3.4.0"
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "@tecsinapse/eslint-config-tecsinapse-js": "^2.1.2"
   },
   "peerDependencies": {
     "raven-js": "^3.27.0"
   },
   "scripts": {
-    "build": "rm -rf build/ && babel src/ -d core/",
+    "build": "rm -rf build/ && babel src/ -d core/ && rollup -c",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public",
     "docz:dev": "docz dev",
