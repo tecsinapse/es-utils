@@ -64,3 +64,5 @@ typings/
 .DS_Store
 .iml
 npm-debug.log
+core/*
+dist/*

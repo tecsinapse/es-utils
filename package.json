@@ -3,26 +3,17 @@
   "version": "0.0.92",
   "description": "A Utils library to turn life easy for Javascript projects",
   "main": "core/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access public",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build --base='/es-utils/'"
-  },
   "author": "Tecsinapse",
   "license": "MIT",
   "sideEffects": false,
   "dependencies": {
     "lodash.uniq": "^4.5.0"
   },
-  "peerDependencies": {
-    "raven-js": "^3.27.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tecsinapse/es-utils.git"
-  },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
     "prop-types": "^15.6.2",
@@ -30,6 +21,29 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "docz": "^0.13.7",
-    "docz-theme-default": "^0.13.7"
+    "docz-theme-default": "^0.13.7",
+    "rollup": "^0.66.6",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^5.0.1",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "peerDependencies": {
+    "raven-js": "^3.27.0"
+  },
+  "scripts": {
+    "build": "rm -rf build/ && babel src/ -d core/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build --base='/es-utils/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tecsinapse/es-utils.git"
   }
 }
