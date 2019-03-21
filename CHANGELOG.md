@@ -1,3 +1,10 @@
+<a name="0.0.100"></a>
+## <small>0.0.100 (2019-03-21)</small>
+
+* Update version ([992c4b7](https://github.com/tecsinapse/es-utils/commit/992c4b7))
+
+
+
 <a name="0.0.98"></a>
 ## <small>0.0.98 (2019-03-21)</small>
 
