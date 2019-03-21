@@ -7,6 +7,8 @@
   "license": "MIT",
   "sideEffects": false,
   "dependencies": {
+    "accounting": "^0.4.1",
+    "big.js": "latest",
     "lodash.uniq": "^4.5.0"
   },
   "devDependencies": {
