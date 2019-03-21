@@ -1,11 +1,19 @@
 {
   "name": "@tecsinapse/es-utils",
-  "version": "0.0.96",
   "description": "A Utils library to turn life easy for Javascript projects",
+  "homepage": "https://github.com/tecsinapse/es-utils#readme",
+  "version": "0.0.97",
   "main": "core/index.js",
-  "author": "Tecsinapse",
-  "license": "MIT",
-  "sideEffects": false,
+  "author": {
+    "name": "Tecsinapse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecsinapse/es-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tecsinapse/es-utils/issues"
+  },
   "dependencies": {
     "accounting": "^0.4.1",
     "big.js": "latest",
@@ -28,20 +36,23 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "peerDependencies": {
-    "raven-js": "^3.27.0"
-  },
+  "files": [
+    "core"
+  ],
   "scripts": {
     "build": "rm -rf build/ && babel src/ -d core/",
     "dev": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access public",
+    "docz:build": "docz build --base='/es-utils/'",
     "docz:dev": "docz dev",
-    "docz:build": "docz build --base='/es-utils/'"
+    "publish": "npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tecsinapse/es-utils.git"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "post-commit": "git update-index --again",
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
@@ -50,13 +61,8 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "post-commit": "git update-index --again",
-      "pre-commit": "lint-staged"
-    }
+  "peerDependencies": {
+    "raven-js": "^3.27.0"
   },
-  "files": [
-    "core"
-  ]
+  "sideEffects": false
 }
