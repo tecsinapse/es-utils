@@ -1,3 +1,8 @@
+## <small>0.0.105 (2019-05-21)</small>
+
+
+
+
 ## <small>0.0.104 (2019-05-21)</small>
 
 * Added getFirstElementOfArray ([c98b491](https://github.com/tecsinapse/es-utils/commit/c98b491))
