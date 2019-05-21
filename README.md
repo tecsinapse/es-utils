@@ -2,5 +2,5 @@
 
 A useful lib for javascript dev
 
-Docs [here](https://tecsinapse.github.io/tecsinapse-es-utils)
+Docs [here](https://tecsinapse.github.io/es-utils/)
 
