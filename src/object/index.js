@@ -66,3 +66,6 @@ export const resolveObj = (path, obj = null) => {
 export const concat = (x, y) => x.concat(y);
 
 export const flatMap = (f, xs) => xs.map(f).reduce(concat, []);
+
+export const getFirstElementOfArray = (array = []) =>
+  array.length > 0 ? array[0] : {};
