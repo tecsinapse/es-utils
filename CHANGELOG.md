@@ -1,3 +1,10 @@
+## <small>0.0.102 (2019-05-21)</small>
+
+* Added getFirstElementOfArray ([c98b491](https://github.com/tecsinapse/es-utils/commit/c98b491))
+* Release 0.0.101 ([57c2b00](https://github.com/tecsinapse/es-utils/commit/57c2b00))
+
+
+
 ## <small>0.0.101 (2019-05-21)</small>
 
 * Added getFirstElementOfArray ([c98b491](https://github.com/tecsinapse/es-utils/commit/c98b491))
