@@ -1,3 +1,13 @@
+## <small>0.0.104 (2019-05-21)</small>
+
+* Added getFirstElementOfArray ([c98b491](https://github.com/tecsinapse/es-utils/commit/c98b491))
+* Added git dirty ([2b18d11](https://github.com/tecsinapse/es-utils/commit/2b18d11))
+* Release 0.0.101 ([57c2b00](https://github.com/tecsinapse/es-utils/commit/57c2b00))
+* Release 0.0.102 ([d9b358d](https://github.com/tecsinapse/es-utils/commit/d9b358d))
+* Release 0.0.103 ([d4bb0d7](https://github.com/tecsinapse/es-utils/commit/d4bb0d7))
+
+
+
 ## <small>0.0.103 (2019-05-21)</small>
 
 * Added getFirstElementOfArray ([c98b491](https://github.com/tecsinapse/es-utils/commit/c98b491))
