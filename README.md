@@ -1,4 +1,4 @@
-# tecsinapse-es-utils
+# @tecsinapse/es-utils
 
 A useful lib for javascript dev
 
