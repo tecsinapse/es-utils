@@ -1,3 +1,21 @@
+## 4.0.0 (2019-08-05)
+
+* Bump js-yaml from 3.12.1 to 3.13.1 ([8200cdb](https://github.com/tecsinapse/es-utils/commit/8200cdb))
+* Bump lodash.merge from 4.6.1 to 4.6.2 ([2500434](https://github.com/tecsinapse/es-utils/commit/2500434))
+* Bump webpack-bundle-analyzer from 3.0.3 to 3.3.2 ([3f0674d](https://github.com/tecsinapse/es-utils/commit/3f0674d))
+* bumpedrc release unsupervisioned ([1c9249e](https://github.com/tecsinapse/es-utils/commit/1c9249e))
+* Jenkins file test ([02ecdbc](https://github.com/tecsinapse/es-utils/commit/02ecdbc))
+* Node version ([f6d754a](https://github.com/tecsinapse/es-utils/commit/f6d754a))
+* Release 1.0.0 ([9a78d8a](https://github.com/tecsinapse/es-utils/commit/9a78d8a))
+* Release 2.0.0 ([d6bedd0](https://github.com/tecsinapse/es-utils/commit/d6bedd0))
+* Release 3.0.0 ([a1ad57a](https://github.com/tecsinapse/es-utils/commit/a1ad57a))
+* Removing lodash.uniq and using lodash ([6328cee](https://github.com/tecsinapse/es-utils/commit/6328cee))
+* Update node version ([913ed66](https://github.com/tecsinapse/es-utils/commit/913ed66))
+* Update README.md ([0c25340](https://github.com/tecsinapse/es-utils/commit/0c25340))
+* Update README.md ([5434002](https://github.com/tecsinapse/es-utils/commit/5434002))
+
+
+
 ## 3.0.0 (2019-08-05)
 
 * Bump js-yaml from 3.12.1 to 3.13.1 ([8200cdb](https://github.com/tecsinapse/es-utils/commit/8200cdb))
