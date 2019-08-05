@@ -1,3 +1,8 @@
+## 1.1.0 (2019-08-05)
+
+
+
+
 ## 1.0.0 (2019-08-05)
 
 * Bump js-yaml from 3.12.1 to 3.13.1 ([8200cdb](https://github.com/tecsinapse/es-utils/commit/8200cdb))
