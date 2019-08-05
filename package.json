@@ -17,7 +17,7 @@
   "dependencies": {
     "accounting": "^0.4.1",
     "big.js": "latest",
-    "lodash.uniq": "^4.5.0"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

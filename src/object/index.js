@@ -1,9 +1,9 @@
-import uniq from 'lodash.uniq';
+import { uniqBy } from 'lodash';
 
 export const flatten = arrayOfArrays =>
   arrayOfArrays.reduce((a, b) => a.concat(b), []);
 
-export const cleanArray = a => uniq(a.filter(n => n));
+export const cleanArray = a => uniqBy(a.filter(n => n));
 
 export const getFirstFromSingleElementArray = (array = []) =>
   array.length === 1 ? array[0] : null;
