@@ -2,7 +2,7 @@
   "name": "@tecsinapse/es-utils",
   "description": "A Utils library to turn life easy for Javascript projects",
   "homepage": "https://github.com/tecsinapse/es-utils#readme",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "main": "core/index.js",
   "author": {
     "name": "Tecsinapse"
