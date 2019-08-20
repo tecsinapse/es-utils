@@ -1,3 +1,9 @@
+<a name="5.1.1"></a>
+## <small>5.1.1 (2019-08-20)</small>
+
+
+
+
 ## 5.1.0 (2019-08-20)
 
 * Added isNotUndefOrNull ([f665454](https://github.com/tecsinapse/es-utils/commit/f665454))
