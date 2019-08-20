@@ -69,3 +69,5 @@ export const flatMap = (f, xs) => xs.map(f).reduce(concat, []);
 
 export const getFirstElementOfArray = (array = []) =>
   array.length > 0 ? array[0] : {};
+
+export const isNotUndefOrNull = value => value !== undefined && value !== null;

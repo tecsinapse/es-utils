@@ -14,3 +14,5 @@ export { resolveObj } from './object';
 export { concat } from './object';
 export { getFirstElementOfArray } from './object';
 export { flatten } from './object';
+export { isNotUndefOrNull } from './object';
+export { flatMap } from './object';
