@@ -1,3 +1,8 @@
+## 5.2.0 (2019-08-20)
+
+
+
+
 ## 5.1.0 (2019-08-20)
 
 * Added isNotUndefOrNull ([f665454](https://github.com/tecsinapse/es-utils/commit/f665454))
