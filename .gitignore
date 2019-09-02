@@ -66,3 +66,9 @@ typings/
 npm-debug.log
 core/*
 dist/*
+# builds
+build
+.cache
+.docz
+dist
+.rpt2_cache
