@@ -1,3 +1,12 @@
+<a name="6.0.0"></a>
+## 6.0.0 (2019-09-02)
+
+* Bump mixin-deep from 1.3.1 to 1.3.2 ([6aefe67](https://github.com/tecsinapse/es-utils/commit/6aefe67))
+* Rolling back changes from "ugly" versions ([1a28ce0](https://github.com/tecsinapse/es-utils/commit/1a28ce0))
+* Rolling back changes from "ugly" versions and preparing for release ([917769c](https://github.com/tecsinapse/es-utils/commit/917769c))
+
+
+
 <a name="5.1.6"></a>
 ## <small>5.1.6 (2019-09-02)</small>
 
