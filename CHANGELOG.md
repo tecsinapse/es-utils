@@ -1,3 +1,10 @@
+<a name="5.1.6"></a>
+## <small>5.1.6 (2019-09-02)</small>
+
+* Rollup build config ([b725469](https://github.com/tecsinapse/es-utils/commit/b725469))
+
+
+
 <a name="5.1.5"></a>
 ## <small>5.1.5 (2019-09-02)</small>
 
