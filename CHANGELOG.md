@@ -1,3 +1,11 @@
+<a name="5.1.5"></a>
+## <small>5.1.5 (2019-09-02)</small>
+
+* Bump eslint-utils from 1.3.1 to 1.4.2 ([4e76892](https://github.com/tecsinapse/es-utils/commit/4e76892))
+* Rollup build ([5e72d32](https://github.com/tecsinapse/es-utils/commit/5e72d32))
+
+
+
 <a name="5.1.4"></a>
 ## <small>5.1.4 (2019-09-02)</small>
 
