@@ -1,3 +1,10 @@
+<a name="6.0.1"></a>
+## <small>6.0.1 (2019-09-02)</small>
+
+* Missing Files ([31b1d0e](https://github.com/tecsinapse/es-utils/commit/31b1d0e))
+
+
+
 <a name="6.0.0"></a>
 ## 6.0.0 (2019-09-02)
 
