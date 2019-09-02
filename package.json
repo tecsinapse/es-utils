@@ -49,10 +49,11 @@
     "rollup-plugin-peer-deps-external": "^2.2.0"
   },
   "files": [
-    "core"
+    "build",
+    "dist"
   ],
   "scripts": {
-    "build": "rm -rf build/ && babel src/ -d build/  && rollup -c",
+    "build": "rm -rf build/ && babel src/ -d build/ && rollup -c",
     "dev": "rollup -c -w",
     "docz:build": "docz build --base='/es-utils/'",
     "docz:dev": "docz dev",
