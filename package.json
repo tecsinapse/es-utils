@@ -35,13 +35,23 @@
     "lint-staged": "7.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^5.0.1",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0"
   },
   "files": [
     "core"
   ],
   "scripts": {
-    "build": "rm -rf build/ && babel src/ -d core/",
+    "build": "rm -rf build/ && babel src/ -d core/  && rollup -c",
     "dev": "rollup -c -w",
     "docz:build": "docz build --base='/es-utils/'",
     "docz:dev": "docz dev",
@@ -61,9 +71,6 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "peerDependencies": {
-    "raven-js": "^3.27.0"
   },
   "sideEffects": false
 }
