@@ -2,7 +2,7 @@
   "name": "@tecsinapse/es-utils",
   "description": "A Utils library to turn life easy for Javascript projects",
   "homepage": "https://github.com/tecsinapse/es-utils#readme",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
   "author": {

@@ -1,3 +1,10 @@
+<a name="6.0.2"></a>
+## <small>6.0.2 (2019-09-26)</small>
+
+* Missing export ([7e05f98](https://github.com/tecsinapse/es-utils/commit/7e05f98))
+
+
+
 <a name="6.0.1"></a>
 ## <small>6.0.1 (2019-09-02)</small>
 
