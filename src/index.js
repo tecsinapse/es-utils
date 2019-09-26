@@ -2,6 +2,7 @@ export { cleanArray } from './object';
 export { getAnyFromArray } from './object';
 export { getLastFromArrayOrObject } from './object';
 export { getFirstFromSingleElementArrayNotNull } from './object';
+export { getFirstFromSingleElementArray } from './object';
 export { isEmptyOrNull } from './object';
 export { isNotEmptyOrNull } from './object';
 export { verifyIfString } from './object';

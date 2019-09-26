@@ -27,9 +27,12 @@ export const truncateString = (string, max = 30) =>
 
 export const omitDeepArrayWalk = (arr, key) =>
   arr.map(val => {
-    if (Array.isArray(val)) return omitDeepArrayWalk(val, key);
-    // eslint-disable-next-line
-    else if (typeof val === 'object') return omitDeep(val, key);
+    if (Array.isArray(val)) {
+      return omitDeepArrayWalk(val, key);
+    }
+    if (typeof val === 'object') {
+      return omitDeep(val, key);
+    }
     return val;
   });
 
@@ -39,10 +42,13 @@ export const omitDeep = (obj, key) => {
   keys.forEach(i => {
     if (i !== key) {
       const val = obj[i];
-      if (Array.isArray(val)) newObj[i] = omitDeepArrayWalk(val, key);
-      else if (typeof val === 'object' && val !== null)
+      if (Array.isArray(val)) {
+        newObj[i] = omitDeepArrayWalk(val, key);
+      } else if (typeof val === 'object' && val !== null) {
         newObj[i] = omitDeep(val, key);
-      else newObj[i] = val;
+      } else {
+        newObj[i] = val;
+      }
     }
   });
   return newObj;
@@ -57,7 +63,9 @@ export const resolveObj = (path, obj = null) => {
   const newPath = path.split('.');
   let current = obj;
   while (newPath.length) {
-    if (typeof current !== 'object' || current === null) return null;
+    if (typeof current !== 'object' || current === null) {
+      return null;
+    }
     current = current[newPath.shift()];
   }
   return current;
