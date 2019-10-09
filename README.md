@@ -1,6 +1,6 @@
 # @tecsinapse/es-utils
 
-https://travis-ci.org/tecsinapse/es-utils.svg?branch=master
+[![Build Status](https://travis-ci.org/tecsinapse/es-utils.svg?branch=master)](https://travis-ci.org/tecsinapse/es-utils)
 
 A useful lib for javascript dev
 
