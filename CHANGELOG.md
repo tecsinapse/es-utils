@@ -1,3 +1,9 @@
+## <small>6.0.5 (2019-10-09)</small>
+
+* Release 6.0.4 ([85fd4a7](https://github.com/tecsinapse/es-utils/commit/85fd4a7))
+
+
+
 ## <small>6.0.4 (2019-10-09)</small>
 
 
