@@ -2,7 +2,7 @@
   "name": "@tecsinapse/es-utils",
   "description": "A Utils library to turn life easy for Javascript projects",
   "homepage": "https://github.com/tecsinapse/es-utils#readme",
-  "version": "6.0.6",
+  "version": "6.0.7",
   "main": "dist/index.cjs.js",
   "module": "build/index.js",
   "author": {
@@ -57,7 +57,6 @@
     "dev": "rollup -c -w",
     "docz:build": "docz build --base='/es-utils/'",
     "docz:dev": "docz dev",
-    "publish": "npm publish --access public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
