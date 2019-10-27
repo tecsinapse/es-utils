@@ -1,0 +1,6 @@
+toc:
+  - name: Objects
+    description: |
+      Here are some helper functions for objects and arays
+    children:
+      - objects

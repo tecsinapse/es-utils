@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - 12
 script:
-  - yarn docz:build
+  - yarnd build:docs:html
+  - yarnd build:docs:md
 
 cache:
   yarn: true
