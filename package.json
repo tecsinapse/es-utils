@@ -52,8 +52,8 @@
   "scripts": {
     "build": "rm -rf build/ && babel src/ -d build/ && rollup -c",
     "dev": "rollup -c -w",
-    "build:docs:md": "documentation --github --config documentation.yml build src/index.js -f html -o docs",
-    "build:docs:html": "documentation --github --config documentation.yml build src/index.js -f html > md-docs/README.md",
+    "build:docs:html": "documentation --github --config documentation.yml build src/index.js -f html -o docs",
+    "build:docs:md": "documentation --github --config documentation.yml build src/index.js -f md > md-docs/README.md",
     "start:docs:html": "documentation --github --config documentation.yml serve --watch src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
