@@ -1,3 +1,20 @@
+<a name="6.0.9"></a>
+## <small>6.0.9 (2019-11-25)</small>
+
+* 3.1.0-beta.0 ([9679c68](https://github.com/tecsinapse/es-utils/commit/9679c68))
+* 6.0.9-beta.0 ([f11b2fe](https://github.com/tecsinapse/es-utils/commit/f11b2fe))
+* Ajustando script de deploy ([dc62bd2](https://github.com/tecsinapse/es-utils/commit/dc62bd2))
+* Ajustando script de deploy ([28a8820](https://github.com/tecsinapse/es-utils/commit/28a8820))
+* Readme ([527d917](https://github.com/tecsinapse/es-utils/commit/527d917))
+* Removing rollup shit ([35db5da](https://github.com/tecsinapse/es-utils/commit/35db5da))
+* Removing rollup shit [2] ([4399d19](https://github.com/tecsinapse/es-utils/commit/4399d19))
+* Update README.md ([43ab127](https://github.com/tecsinapse/es-utils/commit/43ab127))
+* Update README.md ([98d6215](https://github.com/tecsinapse/es-utils/commit/98d6215))
+* Updating lock ([36aac85](https://github.com/tecsinapse/es-utils/commit/36aac85))
+* Using Documentation and removing docz ([daafb0f](https://github.com/tecsinapse/es-utils/commit/daafb0f))
+
+
+
 <a name="6.0.8"></a>
 ## <small>6.0.8 (2019-10-09)</small>
 
