@@ -1,3 +1,9 @@
+## <small>6.0.10 (2019-11-25)</small>
+
+* Docs ([8c7c23f](https://github.com/tecsinapse/es-utils/commit/8c7c23f))
+
+
+
 <a name="6.0.9"></a>
 ## <small>6.0.9 (2019-11-25)</small>
 
