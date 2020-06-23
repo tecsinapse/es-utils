@@ -1,7 +1,0 @@
-steps:
-  analysis:
-    - echo "Analysis"
-  test:
-    - echo "Teste"
-  deploy:
-    - echo "Deploy"
