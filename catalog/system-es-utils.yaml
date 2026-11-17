@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: es-utils
+  title: es-utils
+  description: >
+    Biblioteca de utilitários JavaScript (@tecsinapse/es-utils).
+  labels:
+    tecsinapse.com/lifecycle: ativo
+spec:
+  owner: group:default/quasar

@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: es-utils
+  title: es-utils
+  description: >
+    Biblioteca de utilitários JavaScript (@tecsinapse/es-utils).
+  labels:
+    tecsinapse.com/lifecycle: ativo
+  annotations:
+    github.com/project-slug: tecsinapse/es-utils
+    backstage.io/source-location: url:https://github.com/tecsinapse/es-utils/tree/master/
+    tecsinapse.com/pm: user:default/a-confirmar
+    tecsinapse.com/po: user:default/a-confirmar
+    tecsinapse.com/tech-lead: user:default/a-confirmar
+    tecsinapse.com/personal-data: a-confirmar
+spec:
+  type: library
+  lifecycle: production
+  owner: group:default/quasar
+  system: es-utils

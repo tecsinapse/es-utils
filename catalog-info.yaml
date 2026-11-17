@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: es-utils-catalog
+  description: Entidades do es-utils no Backstage
+spec:
+  type: url
+  targets:
+    - ./catalog/system-es-utils.yaml
+    - ./catalog/es-utils.yaml
